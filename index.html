@@ -1,209 +1,192 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mohamed Elbanna Designs | روابط سريعة</title>
-  <meta name="description" content="كل وسائل التواصل والروابط الرسمية لشركة Mohamed Elbanna Designs: واتساب، اتصال، الموقع، العنوان، البريد، وإنستجرام." />
-  <meta name="theme-color" content="#0B1220" />
-  <meta property="og:title" content="Mohamed Elbanna Designs — روابط سريعة" />
-  <meta property="og:description" content="تواصل سريع: واتساب، اتصال، موقع، خرائط، بريد، ومعرض صور." />
-  <meta property="og:type" content="website" />
-  <style>
-    :root{
-      --bg:#0B1220;
-      --panel:#0F172A;
-      --panel-2:#111b33;
-      --brand:#11C26F;     /* اللون الرئيسي للأزرار المميّزة */
-      --accent:#21A2FF;    /* لون ثانوي */
-      --text:#f8fbff;
-      --muted:#a7b3c6;
-      --stroke:rgba(255,255,255,.10);
-      --radius:20px;
-      --shadow: 0 20px 40px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans";
-      background:
-        radial-gradient(1000px 600px at 85% -10%, rgba(33,162,255,.15), transparent 60%),
-        radial-gradient(900px 600px at -10% 100%, rgba(17,194,111,.12), transparent 60%),
-        var(--bg);
-      color:var(--text);
-      display:flex; align-items:center; justify-content:center; padding:28px;
-    }
-    .wrap{width:100%; max-width:1080px}
-    .shell{
-      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
-      border:1px solid var(--stroke); border-radius:28px; box-shadow:var(--shadow); overflow:hidden;
-    }
-    .header{
-      display:flex; gap:16px; align-items:center; justify-content:space-between;
-      padding:22px 26px; background:rgba(255,255,255,.02); border-bottom:1px solid var(--stroke)
-    }
-    .brand{display:flex; gap:16px; align-items:center}
-    .logo{width:60px; height:60px; border-radius:16px; overflow:hidden; background:#0d1426; border:1px solid var(--stroke); display:grid; place-items:center}
-    .logo img{width:100%; height:100%; object-fit:contain; padding:4px}
-    h1{margin:0; font-size:28px}
-    .subtitle{color:var(--muted); font-size:14px; margin-top:4px}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mohamed Elbanna Designs | روابط سريعة</title>
+<meta name="description" content="التواصل الرسمي مع Mohamed Elbanna Designs: واتساب، اتصال، الموقع، العنوان، البريد، وإنستجرام.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#111;              /* أسود ناعم */
+    --muted:#6b7280;         /* رمادي نص ثانوي */
+    --line:#e5e7eb;          /* حدود رفيعة */
+    --brand:#10b981;         /* أخضر واتساب فقط */
+    --radius:18px;
+    --radius-lg:26px;
+    --shadow:0 20px 50px rgba(0,0,0,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; font-family:'Cairo', system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    color:var(--ink); background:
+      radial-gradient(900px 500px at 110% -10%, #f3f4f6 30%, transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, #f5f5f5 30%, transparent 60%),
+      var(--bg);
+  }
 
-    .grid{display:grid; grid-template-columns: 1.1fr .9fr;}
-    @media (max-width:980px){ .grid{ grid-template-columns: 1fr; } }
+  .wrap{max-width:880px; margin:56px auto; padding:0 20px}
+  .hero{
+    display:flex; gap:20px; align-items:center; padding:28px; border:1px solid var(--line);
+    border-radius:var(--radius-lg); background:#fff; box-shadow:var(--shadow);
+  }
+  .logo{
+    width:74px; height:74px; border-radius:16px; overflow:hidden; background:#fff;
+    border:1px solid var(--line); display:grid; place-items:center; flex:0 0 auto;
+  }
+  .logo img{width:100%; height:100%; object-fit:contain; padding:6px}
+  .hero h1{margin:0; font-weight:700; letter-spacing:.2px; font-size:28px}
+  .hero p{margin:6px 0 0; color:var(--muted); font-size:14px}
 
-    /* يسار: التعريف والمعرض */
-    .col-right{order:1; padding:22px; background:var(--panel-2); display:grid; gap:14px}
-    .card{padding:16px; border:1px solid var(--stroke); border-radius:16px; background:rgba(255,255,255,.02)}
-    .card h3{margin:0 0 8px 0; font-size:16px}
-    .chips{display:flex; flex-wrap:wrap; gap:8px}
-    .chip{font-size:12px; padding:8px 10px; border-radius:999px; border:1px solid var(--stroke); color:var(--muted); text-decoration:none}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    @media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}}
-    .gallery a{position:relative;display:block;border-radius:14px;overflow:hidden;border:1px solid var(--stroke);background:#0b1325}
-    .gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;display:block;filter:saturate(1.05)}
-    .gallery a:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 0 rgba(255,255,255,.2);transition:box-shadow .2s ease}
-    .gallery a:hover:after{box-shadow:inset 0 0 0 4px rgba(255,255,255,.12)}
+  .grid{
+    margin-top:18px; display:grid; grid-template-columns:1fr 1fr; gap:14px;
+  }
+  @media (max-width:760px){ .grid{grid-template-columns:1fr} }
 
-    /* يمين: أزرار كبيرة وواضحة */
-    .col-left{order:2; padding:22px; background:var(--panel); display:grid; gap:12px}
-    .btn{
-      display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:16px;
-      border:1px solid var(--stroke); text-decoration:none; color:var(--text);
-      background:rgba(255,255,255,.015); transition: transform .1s ease, border-color .2s ease, background .2s ease;
-    }
-    .btn:hover{ transform: translateY(-2px); border-color: rgba(255,255,255,.20); background: rgba(255,255,255,.05);}
-    .btn .ico{width:40px; height:40px; border-radius:12px; background:rgba(255,255,255,.06); display:grid; place-items:center; border:1px solid var(--stroke)}
-    .btn b{font-size:16px}
-    .btn small{display:block; color:var(--muted); font-size:13px; margin-top:2px}
-    .cta{background: linear-gradient(135deg, var(--brand), #0bb561); border-color:transparent}
-    .cta:hover{background: linear-gradient(135deg, #1ee081, var(--brand));}
+  .btn{
+    display:flex; align-items:center; gap:14px; padding:16px 18px;
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    text-decoration:none; color:var(--ink); box-shadow:var(--shadow);
+    transition:transform .1s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 16px 40px rgba(0,0,0,.08); border-color:#d1d5db; }
+  .btn .ico{width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:#f9fafb; border:1px solid var(--line)}
+  .btn b{font-size:16px}
+  .btn small{display:block; color:var(--muted); margin-top:2px; font-size:13px}
+  .btn.primary{background:linear-gradient(135deg, var(--brand), #12d3a3); color:#fff; border-color:transparent}
+  .btn.primary .ico{background:rgba(255,255,255,.2); border-color:rgba(255,255,255,.25)}
 
-    footer{padding:14px 22px; color:var(--muted); font-size:12px; border-top:1px solid var(--stroke); background:rgba(255,255,255,.02)}
-  </style>
+  .section{
+    margin-top:22px; padding:22px; border:1px solid var(--line); border-radius:var(--radius-lg);
+    background:#fff; box-shadow:var(--shadow);
+  }
+  .section h3{margin:0 0 10px; font-size:18px}
+  .chips{display:flex; flex-wrap:wrap; gap:8px}
+  .chip{font-size:12px; padding:8px 10px; border-radius:999px; border:1px solid var(--line); color:var(--muted); background:#fff}
+
+  .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:8px}
+  @media (max-width:760px){ .gallery{grid-template-columns:repeat(2,1fr)} }
+  .gallery a{display:block; border-radius:14px; overflow:hidden; border:1px solid var(--line); background:#fff}
+  .gallery img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3; display:block}
+
+  footer{margin:22px 0 12px; text-align:center; color:var(--muted); font-size:12px}
+  .muted{color:var(--muted)}
+</style>
 </head>
 <body>
   <main class="wrap">
-    <section class="shell" aria-label="روابط Mohamed Elbanna Designs">
-      <div class="header">
-        <div class="brand">
-          <div class="logo"><img src="logo.png" alt="Logo Mohamed Elbanna Designs"></div>
-          <div>
-            <h1>Mohamed Elbanna Designs</h1>
-            <div class="subtitle">كل ما يخصنا في مكان واحد</div>
-          </div>
-        </div>
+    <!-- رأس صفحة بسيط وفخم -->
+    <header class="hero">
+      <div class="logo"><img src="logo.png" alt="Mohamed Elbanna Designs Logo"></div>
+      <div>
+        <h1>Mohamed Elbanna Designs</h1>
+        <p>Interior & Architectural Design — كل وسائل التواصل في صفحة واحدة</p>
       </div>
+    </header>
 
-      <div class="grid">
-        <!-- يسار: تعريف + معرض صور -->
-        <div class="col-right">
-          <div class="card">
-            <h3>من نحن</h3>
-            <p style="margin:0;color:var(--muted);line-height:1.7">
-              شركة تصميمات داخلية ومعمارية تقدّم حلولًا متكاملة: تصميم داخلي فاخر، تصميم واجهات ومخططات، وإدارة تنفيذ.
-            </p>
-            <div class="chips" style="margin-top:10px">
-              <span class="chip">Interior Design</span>
-              <span class="chip">Architectural Facades</span>
-              <span class="chip">3D Visualization</span>
-              <span class="chip">Fit-out</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>أعمالنا</h3>
-            <div class="chips">
-              <a class="chip" href="https://www.instagram.com/mohamedelbanadesigns/" target="_blank" rel="noopener">معرض التصميم الداخلي</a>
-              <a class="chip" href="https://mohamedelbana.com/" target="_blank" rel="noopener">مشاريع معمارية</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>معرض صور مختارة</h3>
-            <div class="gallery">
-              <!-- صور ديناميكية من Unsplash (بدّلها لاحقًا بصورك) -->
-              <a href="https://source.unsplash.com/1600x1200/?luxury,interior&sig=11" target="_blank"><img src="https://source.unsplash.com/800x600/?luxury,interior&sig=11" alt="تصميم داخلي فاخر" loading="lazy"></a>
-              <a href="https://source.unsplash.com/1600x1200/?modern,livingroom&sig=12" target="_blank"><img src="https://source.unsplash.com/800x600/?modern,livingroom&sig=12" alt="غرفة معيشة عصرية" loading="lazy"></a>
-              <a href="https://source.unsplash.com/1600x1200/?architectural,facade&sig=13" target="_blank"><img src="https://source.unsplash.com/800x600/?architectural,facade&sig=13" alt="واجهة معمارية حديثة" loading="lazy"></a>
-              <a href="https://source.unsplash.com/1600x1200/?kitchen,interior&sig=14" target="_blank"><img src="https://source.unsplash.com/800x600/?kitchen,interior&sig=14" alt="مطبخ بتشطيبات عالية" loading="lazy"></a>
-              <a href="https://source.unsplash.com/1600x1200/?bedroom,interior&sig=15" target="_blank"><img src="https://source.unsplash.com/800x600/?bedroom,interior&sig=15" alt="غرفة نوم بتفاصيل خشبية" loading="lazy"></a>
-              <a href="https://source.unsplash.com/1600x1200/?office,interior&sig=16" target="_blank"><img src="https://source.unsplash.com/800x600/?office,interior&sig=16" alt="مساحة مكتبية عصرية" loading="lazy"></a>
-            </div>
-            <p style="margin:10px 0 0;color:var(--muted);font-size:12px">
-              لاحقًا يمكنك استبدال هذه الروابط برفع صورك بجانب الملف واستبدال المسارات.
-            </p>
-          </div>
+    <!-- أزرار تواصل كبيرة وواضحة -->
+    <section class="grid" aria-label="روابط سريعة">
+      <a class="btn primary" href="https://wa.me/201142442120" target="_blank" rel="noopener">
+        <span class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3.5A11.9 11.9 0 0012.1 0 12.1 12.1 0 000 12.1a12 12 0 001.6 6L.6 22l3.9-1a12.1 12.1 0 005.6 1.4A12.1 12.1 0 0024.1 12 11.9 11.9 0 0020.5 3.5z" fill="white" opacity=".2"/><path d="M17.7 14.5c-.3-.1-1.8-.9-2-.9s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1a8.5 8.5 0 01-2.5-1.6A9.4 9.4 0 019.1 10c-.2-.3 0-.5.1-.6.2-.2.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2.1-.4 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5H7c-.2 0-.5.1-.8.4s-1 1.1-1 2.5S6.4 11 6.6 11.3 8.7 14.7 11.7 16c.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.9-.7 2.2-1.5.2-.7.2-1.3.1-1.5-.1-.2-.3-.3-.6-.4z" fill="white"/></svg>
+        </span>
+        <div>
+          <b>تواصل واتساب</b>
+          <small>+20 114 244 2120</small>
         </div>
+      </a>
 
-        <!-- يمين: أزرار تواصل كبيرة -->
-        <div class="col-left">
-          <a class="btn cta" href="https://wa.me/201142442120" target="_blank" rel="noopener">
-            <span class="ico" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3.5A11.9 11.9 0 0012.1 0 12.1 12.1 0 000 12.1a12 12 0 001.6 6L.6 22l3.9-1a12.1 12.1 0 005.6 1.4A12.1 12.1 0 0024.1 12 11.9 11.9 0 0020.5 3.5z" fill="white" opacity=".15"/><path d="M17.7 14.5c-.3-.1-1.8-.9-2-.9s-.5-.1-.7.2-.8 1-1 1.2-.4.2-.7.1a8.5 8.5 0 01-2.5-1.6A9.4 9.4 0 019.1 10c-.2-.3 0-.5.1-.6.2-.2.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2.1-.4 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5H7c-.2 0-.5.1-.8.4s-1 1.1-1 2.5S6.4 11 6.6 11.3 8.7 14.7 11.7 16c.7.3 1.3.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.9-.7 2.2-1.5.2-.7.2-1.3.1-1.5-.1-.2-.3-.3-.6-.4z" fill="white"/></svg>
-            </span>
-            <div>
-              <b>تواصل واتساب</b>
-              <small>+20 114 244 2120</small>
-            </div>
-          </a>
-
-          <a class="btn" href="tel:+201142442120">
-            <span class="ico" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.3c1.1.4 2.3.6 3.6.6a1 1 0 011 1V20a1 1 0 01-1 1C10.4 21 3 13.6 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.5.6 3.6a1 1 0 01-.3 1L6.6 10.8z" fill="white"/></svg>
-            </span>
-            <div>
-              <b>اتصال هاتفي</b>
-              <small>+20 114 244 2120</small>
-            </div>
-          </a>
-
-          <a class="btn" href="https://mohamedelbana.com/" target="_blank" rel="noopener">
-            <span class="ico" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c1.3 0 2.5.4 3.5 1C14.5 7.3 14 9.6 14 12s.5 4.7 1.5 7A8 8 0 1112 4z" fill="white"/></svg>
-            </span>
-            <div>
-              <b>الموقع الإلكتروني</b>
-              <small>mohamedelbana.com</small>
-            </div>
-          </a>
-
-          <a class="btn" href="https://google.com/maps?q=30.049448,31.474649" target="_blank" rel="noopener">
-            <span class="ico" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="white"/></svg>
-            </span>
-            <div>
-              <b>العنوان على الخريطة</b>
-              <small>القاهرة الجديدة — إحداثيات مباشرة</small>
-            </div>
-          </a>
-
-          <a class="btn" href="mailto:info@mohamedelbana.com">
-            <span class="ico" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm0 2l8 5 8-5" stroke="white"/></svg>
-            </span>
-            <div>
-              <b>راسلنا عبر البريد</b>
-              <small>info@mohamedelbana.com</small>
-            </div>
-          </a>
-
-          <a class="btn" href="https://www.instagram.com/mohamedelbanadesigns/" target="_blank" rel="noopener">
-            <span class="ico" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A5.5 5.5 0 1112 18.5 5.5 5.5 0 0112 7.5zM18 6.5a1 1 0 110 2 1 1 0 010-2z" fill="white"/></svg>
-            </span>
-            <div>
-              <b>Instagram</b>
-              <small>@mohamedelbanadesigns</small>
-            </div>
-          </a>
+      <a class="btn" href="tel:+201142442120">
+        <span class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.3c1.1.4 2.3.6 3.6.6a1 1 0 011 1V20a1 1 0 01-1 1C10.4 21 3 13.6 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.2.2 2.5.6 3.6a1 1 0 01-.3 1L6.6 10.8z" fill="#111"/></svg>
+        </span>
+        <div>
+          <b>اتصال هاتفي</b>
+          <small>+20 114 244 2120</small>
         </div>
-      </div>
+      </a>
 
-      <footer>
-        © <span id="y"></span> Mohamed Elbanna Designs — صفحة روابط سريعة. مستضافة على GitHub Pages.
-      </footer>
+      <a class="btn" href="https://mohamedelbana.com/" target="_blank" rel="noopener">
+        <span class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2c1.3 0 2.5.4 3.5 1C14.5 7.3 14 9.6 14 12s.5 4.7 1.5 7A8 8 0 1112 4z" fill="#111"/></svg>
+        </span>
+        <div>
+          <b>الموقع الإلكتروني</b>
+          <small>mohamedelbana.com</small>
+        </div>
+      </a>
+
+      <a class="btn" href="https://google.com/maps?q=30.049448,31.474649" target="_blank" rel="noopener">
+        <span class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="#111"/></svg>
+        </span>
+        <div>
+          <b>العنوان على الخريطة</b>
+          <small class="muted">القاهرة الجديدة — إحداثيات مباشرة</small>
+        </div>
+      </a>
+
+      <a class="btn" href="mailto:info@mohamedelbana.com">
+        <span class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2zm0 2l8 5 8-5" stroke="#111"/></svg>
+        </span>
+        <div>
+          <b>راسلنا عبر البريد</b>
+          <small>info@mohamedelbana.com</small>
+        </div>
+      </a>
+
+      <a class="btn" href="https://www.instagram.com/mohamedelbanadesigns/" target="_blank" rel="noopener">
+        <span class="ico">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.5A5.5 5.5 0 1112 18.5 5.5 5.5 0 0112 7.5z" fill="#111"/></svg>
+        </span>
+        <div>
+          <b>Instagram</b>
+          <small>@mohamedelbanadesigns</small>
+        </div>
+      </a>
     </section>
+
+    <!-- نبذة ومعرض صور بسيط -->
+    <section class="section" aria-label="نبذة">
+      <h3>من نحن</h3>
+      <p class="muted" style="margin:0 0 10px; line-height:1.9">
+        شركة تصميمات داخلية ومعمارية تقدّم حلولاً متكاملة: تصميم داخلي فاخر، تصميم واجهات ومخططات، وإدارة التنفيذ.
+      </p>
+      <div class="chips">
+        <span class="chip">Interior Design</span>
+        <span class="chip">Architectural Facades</span>
+        <span class="chip">3D Visualization</span>
+        <span class="chip">Fit-out</span>
+      </div>
+    </section>
+
+    <section class="section" aria-label="معرض صور">
+      <h3>معرض صور مختارة</h3>
+      <div class="gallery">
+        <a href="https://source.unsplash.com/1600x1200/?luxury,interior&sig=21" target="_blank">
+          <img src="https://source.unsplash.com/800x600/?luxury,interior&sig=21" alt="تصميم داخلي فاخر" loading="lazy"></a>
+        <a href="https://source.unsplash.com/1600x1200/?architectural,facade&sig=22" target="_blank">
+          <img src="https://source.unsplash.com/800x600/?architectural,facade&sig=22" alt="واجهة معمارية حديثة" loading="lazy"></a>
+        <a href="https://source.unsplash.com/1600x1200/?modern,livingroom&sig=23" target="_blank">
+          <img src="https://source.unsplash.com/800x600/?modern,livingroom&sig=23" alt="غرفة معيشة عصرية" loading="lazy"></a>
+        <a href="https://source.unsplash.com/1600x1200/?kitchen,interior&sig=24" target="_blank">
+          <img src="https://source.unsplash.com/800x600/?kitchen,interior&sig=24" alt="مطبخ بتشطيبات عالية" loading="lazy"></a>
+        <a href="https://source.unsplash.com/1600x1200/?bedroom,interior&sig=25" target="_blank">
+          <img src="https://source.unsplash.com/800x600/?bedroom,interior&sig=25" alt="غرفة نوم" loading="lazy"></a>
+        <a href="https://source.unsplash.com/1600x1200/?office,interior&sig=26" target="_blank">
+          <img src="https://source.unsplash.com/800x600/?office,interior&sig=26" alt="مساحة مكتبية" loading="lazy"></a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Mohamed Elbanna Designs — صفحة روابط سريعة.
+    </footer>
   </main>
   <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
+

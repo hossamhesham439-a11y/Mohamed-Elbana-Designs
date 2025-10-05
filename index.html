@@ -1,161 +1,129 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mohamed Elbanna Designs — Links</title>
-<meta name="description" content="روابط واتساب والحجز والموقع والسوشيال لشركة Mohamed Elbanna Designs.">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Links – Mohamed Elbanna Designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --card-w: 410px;
     --radius: 28px;
     --btn-radius: 14px;
     --ink:#fff;
-    --muted:rgba(255,255,255,.8);
-    --shadow: 0 18px 50px rgba(0,0,0,.35);
-    --btn-bg:#ffffff;
+    --muted:rgba(255,255,255,.85);
+    --btn-bg:#fff;
     --btn-ink:#111827;
     --btn-hover:#f3f4f6;
-    --accent:#10b981; /* نقطة التحقق أو لون مميز */
+    --ring: rgba(255,255,255,.65);
+    --shadow: 0 18px 50px rgba(0,0,0,.35);
   }
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
-    margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans";
-    background:#efefef; display:grid; place-items:center; padding:20px;
+    margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background:#ececec; display:grid; place-items:center; padding:20px;
   }
 
+  /* البطاقة */
   .phone{
-    width: min(100%, var(--card-w));
-    aspect-ratio: 9/16;
-    max-height: 880px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    position: relative;
-    background:#000;
-    display:flex; align-items:flex-end;
+    width:min(100%,var(--card-w));
+    aspect-ratio:9/16;
+    max-height:880px;
+    border-radius:var(--radius);
+    overflow:hidden; position:relative; box-shadow:var(--shadow);
+    background:#000; display:flex; align-items:flex-end;
   }
 
-  /* الخلفية */
-  .bg{
-    position:absolute; inset:0;
-    background:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-  }
+  /* خلفية الصورة */
+  .bg{position:absolute; inset:0; background:url('https://images.unsplash.com/photo-1508182311256-e3f6a7a33f36?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;}
   .bg::after{
     content:""; position:absolute; inset:0;
-    /* تدرّج علشان يبان النص فوق الصورة */
-    background: linear-gradient(180deg, rgba(0,0,0,.25) 10%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.85) 100%);
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.88) 100%);
   }
 
-  /* المحتوى */
-  .content{
-    position:relative; z-index:2;
-    width:100%; padding:22px;
-    color:var(--ink);
-  }
-
-  .header{
-    position:absolute; top:22px; left:22px; right:22px;
-    display:flex; gap:14px; align-items:center;
-  }
+  /* الأفاتار + الاسم */
+  .header{position:absolute; inset-inline:0; top:26px; display:grid; justify-items:center; color:var(--ink); text-align:center; z-index:2}
   .avatar{
-    width:76px; height:76px; border-radius:999px; overflow:hidden;
-    border:3px solid rgba(255,255,255,.9); box-shadow:0 6px 16px rgba(0,0,0,.35);
-    flex:0 0 auto;
+    width:84px; height:84px; border-radius:999px; overflow:hidden;
+    border:3px solid var(--ring); box-shadow:0 8px 22px rgba(0,0,0,.45); background:#222;
   }
   .avatar img{width:100%; height:100%; object-fit:cover}
-  .hgroup h1{margin:0; font-size:22px; letter-spacing:.2px}
-  .hgroup p{margin:6px 0 0; font-size:14px; color:var(--muted)}
-  .badge{
-    display:inline-flex; align-items:center; gap:6px; margin-inline-start:6px;
-    font-size:12px; padding:3px 8px; border-radius:999px; background:rgba(255,255,255,.18);
-    border:1px solid rgba(255,255,255,.35)
-  }
-  .badge .dot{width:8px; height:8px; border-radius:50%; background:var(--accent)}
+  h1{margin:10px 0 4px; font-size:22px; font-weight:800; letter-spacing:.2px}
+  .sub{margin:0; font-size:14px; color:var(--muted)}
+  .verify{display:inline-grid; grid-auto-flow:column; gap:6px; align-items:center; font-weight:600}
+  .badge{width:10px; height:10px; border-radius:50%; background:#10b981; box-shadow:0 0 0 3px rgba(16,185,129,.25)}
 
-  .buttons{display:grid; gap:12px; margin-top:220px}
+  /* الأزرار */
+  .content{position:relative; z-index:2; width:100%; padding:20px;}
+  .buttons{display:grid; gap:12px; margin-top:230px}
   .btn{
     display:flex; align-items:center; justify-content:center; gap:10px;
-    padding:14px 16px; border-radius: var(--btn-radius);
-    text-decoration:none; background:var(--btn-bg); color:var(--btn-ink);
-    box-shadow:0 6px 20px rgba(0,0,0,.18); border:1px solid rgba(0,0,0,.06);
-    font-weight:700; letter-spacing:.2px; transition:transform .08s ease, background .2s ease;
+    padding:14px 16px; border-radius:var(--btn-radius);
+    background:var(--btn-bg); color:var(--btn-ink);
+    text-decoration:none; font-weight:700; letter-spacing:.1px;
+    border:1px solid rgba(0,0,0,.05);
+    box-shadow:0 8px 22px rgba(0,0,0,.18);
+    transition:transform .08s ease, background .2s ease, box-shadow .2s ease;
   }
-  .btn:hover{ background:var(--btn-hover); transform:translateY(-2px) }
-  .btn .ico{display:grid; place-items:center; width:22px; height:22px}
+  .btn:hover{ background:var(--btn-hover); transform:translateY(-2px); box-shadow:0 12px 26px rgba(0,0,0,.22) }
 
-  /* صف السوشيال */
-  .social{
-    display:flex; gap:16px; justify-content:center; margin-top:16px;
-  }
+  /* صف الأيقونات */
+  .social{display:flex; gap:16px; justify-content:center; margin-top:16px}
   .social a{
     width:38px; height:38px; border-radius:999px; display:grid; place-items:center;
-    background:rgba(255,255,255,.22); color:#fff; text-decoration:none;
-    border:1px solid rgba(255,255,255,.35);
+    background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.35);
     transition:transform .08s ease, background .2s ease;
   }
-  .social a:hover{ transform:translateY(-2px); background:rgba(255,255,255,.3) }
+  .social a:hover{ transform:translateY(-2px); background:rgba(255,255,255,.28) }
+  /* أيقونات SVG بيضاء رفيعة */
+  svg{display:block}
 
-  /* ديسكتوب: صفحتك تملى الشاشة في المنتصف */
-  @media (min-width:900px){
-    body{ background:#eaeaea; }
-  }
-
-  /* دعم RTL ولغات عربية */
-  [dir="rtl"] .badge{margin-inline-start:6px}
+  /* تباعد ممتاز على الدِسكتوب */
+  @media (min-width:900px){ body{ background:#e6e6e6 } }
 </style>
 </head>
 <body>
 
-  <main class="phone" aria-label="Mohamed Elbanna Designs Links Card">
-    <div class="bg" aria-hidden="true"></div>
+<main class="phone" aria-label="Links Card">
+  <div class="bg" aria-hidden="true"></div>
 
-    <div class="content">
-      <!-- أعلى: صورة دائرية + اسم + وصف -->
-      <div class="header">
-        <div class="avatar">
-          <!-- ضع لوجو/صورة شخصية هنا -->
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" alt="Logo / Avatar">
-        </div>
-        <div class="hgroup">
-          <h1>Mohamed Elbanna Designs <span class="badge"><span class="dot"></span> موثوق</span></h1>
-          <p>Interior & Architectural Design — Cairo, Egypt</p>
-        </div>
-      </div>
-
-      <!-- أزرار كبيرة -->
-      <div class="buttons" role="list">
-        <a class="btn" role="listitem" href="https://wa.me/201142442120" target="_blank" rel="noopener">
-          <span class="ico" aria-hidden="true">💬</span> تواصل واتساب
-        </a>
-
-        <a class="btn" role="listitem" href="tel:+201142442120">
-          <span class="ico" aria-hidden="true">📞</span> اتصل بنا
-        </a>
-
-        <a class="btn" role="listitem" href="https://mohamedelbana.com/" target="_blank" rel="noopener">
-          <span class="ico" aria-hidden="true">🌐</span> الموقع الإلكتروني
-        </a>
-
-        <a class="btn" role="listitem" href="https://google.com/maps?q=30.049448,31.474649" target="_blank" rel="noopener">
-          <span class="ico" aria-hidden="true">📍</span> العنوان على الخريطة
-        </a>
-
-        <a class="btn" role="listitem" href="mailto:info@mohamedelbana.com">
-          <span class="ico" aria-hidden="true">✉️</span> راسلنا عبر البريد
-        </a>
-      </div>
-
-      <!-- سوشيال -->
-      <nav class="social" aria-label="روابط سوشيال">
-        <a href="https://www.instagram.com/mohamedelbanadesigns/" target="_blank" aria-label="Instagram"></a>
-        <a href="https://mohamedelbana.com/" target="_blank" aria-label="Website">⌂</a>
-        <!-- أضف لينكدإن/فيسبوك لو عندك -->
-      </nav>
+  <!-- أعلى: أفاتار + اسم + وصف -->
+  <div class="header">
+    <div class="avatar">
+      <!-- غيّر الصورة بصورتك/لوجوك -->
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" alt="Avatar">
     </div>
-  </main>
+    <h1>Mohamed Elbanna Designs <span class="verify"><span class="badge"></span> Verified</span></h1>
+    <p class="sub">Interior & Architectural Design — Cairo, Egypt</p>
+  </div>
+
+  <!-- وسط وأسفل: أزرار + سوشيال -->
+  <div class="content">
+    <div class="buttons" role="list">
+      <a class="btn" role="listitem" href="https://wa.me/201142442120" target="_blank" rel="noopener">My favourite projects (WhatsApp)</a>
+      <a class="btn" role="listitem" href="tel:+201142442120">Book us</a>
+      <a class="btn" role="listitem" href="https://mohamedelbana.com/" target="_blank" rel="noopener">Website</a>
+    </div>
+
+    <nav class="social" aria-label="Social links">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/mohamedelbanadesigns/" target="_blank" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#fff"/><circle cx="12" cy="12" r="4" stroke="#fff"/><circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/></svg>
+      </a>
+      <!-- Facebook -->
+      <a href="#" target="_blank" aria-label="Facebook">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v3H8v3h3v6h3v-6h2.6l.4-3H14V9z" fill="#fff"/></svg>
+      </a>
+      <!-- موقع -->
+      <a href="https://mohamedelbana.com/" target="_blank" aria-label="Website">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff"/><path d="M12 3c2 3 3 6 3 9s-1 6-3 9c-2-3-3-6-3-9s1-6 3-9zM3 12h18" stroke="#fff"/></svg>
+      </a>
+      <!-- لو عايز تضيف Spotify أو غيره انسخ زر تاني -->
+    </nav>
+  </div>
+</main>
 
 </body>
 </html>
-
